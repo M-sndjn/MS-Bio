@@ -55,9 +55,10 @@ export default function SkillsSection() {
       <div className=" top-0 h-screen flex flex-col justify-around space-x-44">
         
         <div className="mix-blend-difference">
-          <h2 className="text-5xl p-10">Skills</h2>
+          <h2 className="text-5xl px-10 py-5">Skills</h2>
+          <span className="text-white px-10 block w-1/2">What I actively use, what I’ve applied in projects, and what I’m currently exploring.</span>
 
-          <div className="flex space-x-4 pl-6 translate-y-14">
+          <div className="flex space-x-4 pl-6 translate-y-20">
               
                 <IconRow isActive={level === "Comfortable"}>
                   <Skill><Tailwindicon /></Skill>
