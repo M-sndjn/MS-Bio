@@ -1,9 +1,10 @@
 @import "tailwindcss";
 
 @keyframes float-slow {
-  0% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-10px) rotate(2deg); }
-  100% { transform: translateY(0) rotate(0deg); }
+  0% { transform: rotate(0deg)  }
+  50% { transform: rotate(9deg)  }
+  75% {transform: rotate(5deg)  }
+  100% { transform: rotate(0deg)  }
 }
 
 @keyframes float-medium {
@@ -34,10 +35,19 @@
   from { width: 0 }
   to { width: 100% }
 }
+@keyframes typing-slow {
+  from { width: 0 }
+  to { width: 100% }
+}
 
 .typing {
   width: fit-content;
   animation: typing 0.9s steps(12) forwards;
+}
+
+.typing-slow {
+  width: fit-content;
+  animation: typing 1.0s steps(22) forwards;
 }
 
 .wordFade {

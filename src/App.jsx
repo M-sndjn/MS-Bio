@@ -12,6 +12,7 @@ export default function App() {
       <main className="relative">
         <IntroSection />
         <SkillsSection />
+        
       </main>
     </div>
   );

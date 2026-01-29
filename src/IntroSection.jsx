@@ -33,9 +33,9 @@ export default function IntroSection() {
             <span className="text-4xl block">My Name Is Masaki</span>
           </div>
 
-          <span className="text-2xl block mt-6 max-w-xl">
+          <span className="text-3xl text-white/80 block mt-6 w-48">
             I design and build interfaces that feel{" "}
-            <span key={word} className="  block overflow-hidden font-medium typing">
+            <span key={word} className="block text-white overflow-hidden font-medium typing">
               {word}
             </span>
           </span>

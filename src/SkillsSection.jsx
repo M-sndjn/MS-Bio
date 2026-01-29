@@ -5,6 +5,7 @@ import Laravel from "./assets/laravel.svg?react";
 import ReactIcon from "./assets/react.svg?react";
 import Figma from "./assets/figma.svg?react";
 import { useEffect, useState, useRef } from "react";
+import Triangle from "./assets/Triangle.png";
 
   const ACTIVE_LIFT = "-translate-y-6"; // highlight
   const IDLE_LIFT = "translate-y-0";    // default
@@ -14,6 +15,15 @@ export default function SkillsSection() {
   const [ level,setLevel ] = useState(null);
   const [isActive , setisActive] = useState(false);
   const sectionRef = useRef(null);
+  {/* 
+  const [scroll, setScroll] = useState(0);
+
+  useEffect(() => {
+    const onScroll = () => setScroll(window.scrollY);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+  */}
 
     useEffect(() => {
       const observer = new IntersectionObserver(
@@ -32,31 +42,75 @@ export default function SkillsSection() {
       return () => observer.disconnect();
     }, []);
 
-    useEffect(() => {
-      if (!isActive) return;
+   useEffect(() => {
+        if (!isActive) return;
 
-      const levels = ["Comfortable", "Applied", "Exploring"];
-      let index = -1;
+        const levels = ["Comfortable", "Applied", "Exploring", "Outro"];
+        let index = levels.indexOf(level);
 
-      const interval = setInterval(() => {
-        index = (index + 1) % levels.length;
-        setLevel(levels[index]);
-      }, 2000);
+        const delay = level === "Outro" ? 5000 : 2000;
 
-      return () => clearInterval(interval);
-    }, [isActive]);
+        const timeout = setTimeout(() => {
+          const nextIndex = (index + 1) % levels.length;
+          setLevel(levels[nextIndex]);
+        }, delay);
+
+        return () => clearTimeout(timeout);
+      }, [isActive, level]);
+
+
+  const emailRef = useRef(null);
+  const delayTimeoutRef = useRef(null);
+  const [isEmailActive, setIsEmailActive] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          // delay activation
+          delayTimeoutRef.current = setTimeout(() => {
+            setIsEmailActive(true);
+          }, 8000);
+        } else {
+          // reset if it leaves view
+          clearTimeout(delayTimeoutRef.current);
+          setIsEmailActive(false);
+        }
+      },
+      {
+        threshold: 0.4,
+      }
+    );
+
+    if (emailRef.current) {
+      observer.observe(emailRef.current);
+    }
+
+    return () => {
+      clearTimeout(delayTimeoutRef.current);
+      observer.disconnect();
+    };
+  }, []);
+
+
 
 
   return (
 
 
     <section ref={sectionRef} className="relative min-h-screen mt-10 ml-10">
-      
+      {/*
+      <div style = {{transform: `translateY(${-scroll * 0.34}px)`}}><img src={Triangle} alt="" className="absolute float-slow w-8 h-8 right-[10vh] top-[10vh]"/></div>
+      <div style = {{transform: `translateY(${-scroll * 0.26}px)`}}><img src={Triangle} alt="" className="absolute float-slow w-8 h-8 right-[22vh] top-[48vh]"/></div>
+      <div style = {{transform: `translateY(${-scroll * 0.39}px)`}}><img src={Triangle} alt="" className="absolute float-slow w-8 h-8 right-[7vh] top-[24vh]"/></div>
+      <div style = {{transform: `translateY(${-scroll * 0.24}px)`}}><img src={Triangle} alt="" className="absolute float-slow w-8 h-8 right-[37vh] top-[38vh]"/></div>
+      <div style = {{transform: `translateY(${-scroll * 0.36}px)`}}><img src={Triangle} alt="" className="absolute float-slow w-8 h-8 right-[4vh] top-[28vh]"/></div>
+       */}
       <div className=" top-0 h-screen flex flex-col justify-around space-x-44">
         
         <div className="mix-blend-difference">
           <h2 className="text-5xl px-10 py-5">Skills</h2>
-          <span className="text-white px-10 block w-1/2">What I actively use, what I’ve applied in projects, and what I’m currently exploring.</span>
+          <span className="text-white px-10 block text-lg w-1/2">What I actively use, what I’ve applied in projects, and what I’m currently exploring.</span>
 
           <div className="flex space-x-4 pl-6 translate-y-20">
               
@@ -78,7 +132,7 @@ export default function SkillsSection() {
           </div>
         </div>
         <div className=" h-40 w-full mix-blend-difference">
-          {level && (
+          {level && level !== "Outro" && (
             <span
               key={level} // IMPORTANT: retriggers animation
               className="text-4xl p-10 block overflow-hidden whitespace-nowrap typing"
@@ -86,7 +140,20 @@ export default function SkillsSection() {
               {level}
             </span>
           )}
-
+          {level === "Outro" && (
+            <div className="p-10 space-y-2">
+              <span className="text-4xl block typing overflow-hidden whitespace-nowrap ">
+                Let’s build something.
+              </span>
+            </div>
+          )}
+            <div ref={emailRef}>
+              {isEmailActive && (
+                <span className="text-sm px-10 opacity-50 block overflow-hidden whitespace-nowrap typing-slow">
+                  youremail@example.com
+                </span>
+              )}
+            </div>
         </div>
 
         {/*<div className="h-30 w-30 rounded-full border-white/40 border-2 translate-y-52" />*/}
