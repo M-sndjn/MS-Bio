@@ -47,7 +47,7 @@
 
 .typing-slow {
   width: fit-content;
-  animation: typing 1.0s steps(22) forwards;
+  animation: typing 1.0s steps(29) forwards;
 }
 
 .wordFade {

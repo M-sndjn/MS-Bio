@@ -62,6 +62,7 @@ export default function SkillsSection() {
   const emailRef = useRef(null);
   const delayTimeoutRef = useRef(null);
   const [isEmailActive, setIsEmailActive] = useState(false);
+  
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -108,11 +109,11 @@ export default function SkillsSection() {
        */}
       <div className=" top-0 h-screen flex flex-col justify-around space-x-44">
         
-        <div className="mix-blend-difference">
-          <h2 className="text-5xl px-10 py-5">Skills</h2>
-          <span className="text-white px-10 block text-lg w-1/2">What I actively use, what I’ve applied in projects, and what I’m currently exploring.</span>
+        <div className="mix-blend-difference ">
+          <h2 className="text-2xl sm:text-5xl sm:px-10 py-5 px-5">Skills</h2>
+          <span className="text-white sm:px-10 px-5 block text-sm sm:text-lg w-1/2">What I actively use, what I’ve applied in projects, and what I’m currently exploring.</span>
 
-          <div className="flex space-x-4 pl-6 translate-y-20">
+          <div className="flex space-x-1 sm:space-x-4 sm:pl-6 pl-3 translate-y-15 sm:translate-y-20">
               
                 <IconRow isActive={level === "Comfortable"}>
                   <Skill><Tailwindicon /></Skill>
@@ -135,22 +136,22 @@ export default function SkillsSection() {
           {level && level !== "Outro" && (
             <span
               key={level} // IMPORTANT: retriggers animation
-              className="text-4xl p-10 block overflow-hidden whitespace-nowrap typing"
+              className="text-xl sm:text-4xl sm:p-10 px-5 py-10 block overflow-hidden whitespace-nowrap typing"
             >
               {level}
             </span>
           )}
           {level === "Outro" && (
-            <div className="p-10 space-y-2">
-              <span className="text-4xl block typing overflow-hidden whitespace-nowrap ">
+            <div className="sm:p-10 px-5 py-10 space-y-2">
+              <span className="text-xl sm:text-4xl block typing overflow-hidden whitespace-nowrap ">
                 Let’s build something.
               </span>
             </div>
           )}
             <div ref={emailRef}>
               {isEmailActive && (
-                <span className="text-sm px-10 opacity-50 block overflow-hidden whitespace-nowrap typing-slow">
-                  youremail@example.com
+                <span className="text-xs sm:text-sm sm:px-10 px-5 opacity-70 block overflow-hidden whitespace-nowrap typing-slow">
+                  sandajan.masaki1919@gmail.com
                 </span>
               )}
             </div>
@@ -166,8 +167,8 @@ export default function SkillsSection() {
 
 function Skill({ children, className = "" }) {
   return (
-    <div className="w-18 h-18 flex items-center justify-center">
-      <div className={`w-12 h-12 text-white ${className}`}>
+    <div className="w-10 h-10 sm:w-18 sm:h-18 flex items-center justify-center">
+      <div className={`w-6 h-6 sm:w-12 sm:h-12 text-white ${className}`}>
         {children}
       </div>
     </div>

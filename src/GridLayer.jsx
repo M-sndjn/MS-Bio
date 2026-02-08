@@ -17,17 +17,17 @@ export default function GridLayer() {
         <div className="w-[4%] border-l border-white/0" />
 
         {/* COLUMN 1 */}
-        <div className="relative w-[42%] border-l border-white/0 overflow-hidden">
+        <div className="relative w-[48%] border-l border-white/0 overflow-hidden">
           <div
-            className="absolute w-full h-[70vh] bg-white top-[28vh] mix-blend-difference"
+            className="absolute w-full sm:min-h-[70vh] sm:[--base-y:28vh] [--base-y:28vh] h-[50vh]  bg-white  mix-blend-difference"
             style={{
-              transform: `translateY(${-scroll * 1.5}px)`,
+              transform: `translateY(calc(var(--base-y) - ${scroll * 1.5}px))`,
             }}
           />
-                    <div
-            className="absolute w-full h-[70vh] bg-white top-[180vh] mix-blend-difference"
+          <div
+            className="absolute w-full sm:min-h-[70vh] sm:[--base-y:178vh] [--base-y:180vh] h-[50vh] bg-white  mix-blend-difference"
             style={{
-              transform: `translateY(${-scroll * 1.5}px)`,
+              transform: `translateY(calc(var(--base-y) - ${scroll * 1.5}px))`,
             }}
           />
 
@@ -40,13 +40,13 @@ export default function GridLayer() {
         {/* COLUMN 2 */}
         <div className="relative w-[18%] border-l border-white/0 overflow-hidden">
           <div
-            className="absolute w-full h-[35vh] bg-white top-[45vh]"
+            className="absolute w-full h-[20vh] sm:min-h-[35vh] bg-white top-[45vh]"
             style={{
               transform: `translateY(${scroll * 0.7}px)`,
             }}
           />
                     <div
-            className="absolute w-full h-[35vh] bg-white -top-[65vh]"
+            className="absolute w-full h-[20vh] sm:min-h-[35vh] bg-white -top-[69vh]"
             style={{
               transform: `translateY(${scroll * 0.7}px)`,
             }}
@@ -54,7 +54,7 @@ export default function GridLayer() {
         </div>
 
         {/* EMPTY COLUMN */}
-        <div className="w-[8%] border-l border-white/0" />
+        <div className="w-[2%] border-l border-white/0" />
 
         {/* FILL */}
         <div className="flex-1 border-l border-white/0" />
