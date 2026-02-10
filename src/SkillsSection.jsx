@@ -152,7 +152,7 @@ export default function SkillsSection() {
             <div ref={emailRef}>
               {isEmailActive && (
                 <span className="text-xs sm:text-sm sm:px-10 px-5 opacity-70 block overflow-hidden whitespace-nowrap typing-slow">
-                  sandajan.masaki1919@gmail.com
+                  sandajan.masaki1919@gmail.com test
                 </span>
               )}
             </div>
