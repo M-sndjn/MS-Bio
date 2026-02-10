@@ -146,7 +146,8 @@ export default function SkillsSection() {
               <span className="text-xl sm:text-4xl block typing overflow-hidden whitespace-nowrap ">
                 Let’s build something.
               </span>
-            </div>
+            </div> 
+
           )}
             <div ref={emailRef}>
               {isEmailActive && (
