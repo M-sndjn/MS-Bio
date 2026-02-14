@@ -1,10 +1,11 @@
+@source "../**/*.{js,ts,jsx,tsx}";
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@source "./app/**/*.{js,ts,jsx,tsx}";
-@source "./components/**/*.{js,ts,jsx,tsx}";
-@source "./src/**/*.{js,ts,jsx,tsx}";
+
 
 @theme {
   --font-kodemono: "Kode Mono", monospace;

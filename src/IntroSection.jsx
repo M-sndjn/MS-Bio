@@ -27,13 +27,13 @@ export default function IntroSection() {
 
     <section className="relative min-h-screen flex ml-10 mt-20">
 
-        <div className="mix-blend-difference text-2xl sm:text-5xl px-5 py-10 sm:p-10 space-y-20 ">
-          <div>
-            <span>Hello!</span>
-            <span className="text-xl sm:text-4xl block">My Name Is Masaki</span>
+        <div className="mix-blend-difference  px-5 py-10 sm:p-10 space-y-20 ">
+          <div className="">
+            <span className="text-2xl sm:text-4xl">Hello!</span>
+            <span className="text-2xl sm:text-4xl block">My Name Is Masaki</span>
           </div>
 
-          <span className="text-lg sm:text-3xl text-white/80 block mt-6 w-48">
+          <span className="text-xl sm:text-2xl text-white/80 block mt-6 w-48">
             I design and build interfaces that feel{" "}
             <span key={word} className="block text-white overflow-hidden font-medium typing">
               {word}
