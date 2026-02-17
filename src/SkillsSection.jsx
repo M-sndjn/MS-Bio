@@ -107,20 +107,16 @@ export default function SkillsSection() {
       <div style = {{transform: `translateY(${-scroll * 0.24}px)`}}><img src={Triangle} alt="" className="absolute float-slow w-8 h-8 right-[37vh] top-[38vh]"/></div>
       <div style = {{transform: `translateY(${-scroll * 0.36}px)`}}><img src={Triangle} alt="" className="absolute float-slow w-8 h-8 right-[4vh] top-[28vh]"/></div>
        */}
-      <div className=" top-0 h-screen flex flex-col justify-around space-x-44">
+      <div className=" top-0 h-screen flex flex-col  justify-around">
         
-        <div className="mix-blend-difference ">
+        <div className="mix-blend-difference">
           <h2 className="text-3xl sm:text-4xl sm:px-10 py-5 px-5">Skills</h2>
-          <span className="text-white sm:px-10 px-5 block text-md sm:text-lg w-3/5">What I actively use, what I’ve applied in projects, and what I’m currently exploring.</span>
+          <span className="text-white sm:px-10 px-5 block text-md sm:text-lg w-[54%]">What I actively use, what I’ve applied in projects, and what I’m currently exploring.</span>
 
-          <div className="flex space-x-2 sm:space-x-4 sm:pl-6 pl-3 translate-y-15 sm:translate-y-20">
+          <div className="flex space-x-4 sm:space-x-8 sm:pl-6 pl-3 translate-y-15 sm:translate-y-20">
               
-                <IconRow isActive={level === "Comfortable"}>
-                  <Skill><Tailwindicon /></Skill>
-                </IconRow>
-                <IconRow isActive={level === "Comfortable"}>
-                  <Skill><Html5 /></Skill>
-                </IconRow>
+              <IconRow isActive={level === "Comfortable"}><Skill><Tailwindicon /></Skill></IconRow>
+              <IconRow isActive={level === "Comfortable"}><Skill><Html5 /></Skill></IconRow>
               <IconRow isActive={level === "Applied"}><Skill><Javascript /></Skill></IconRow>
               <IconRow isActive={level === "Exploring"}><Skill><ReactIcon /></Skill></IconRow>
               <IconRow isActive={level === "Exploring"}><Skill><Laravel /></Skill></IconRow>
@@ -168,7 +164,7 @@ export default function SkillsSection() {
 
 function Skill({ children, className = "" }) {
   return (
-    <div className="w-10 h-10 sm:w-18 sm:h-18 flex items-center justify-center">
+    <div className="w-10 h-10  sm:w-18 sm:h-18 flex items-center justify-center">
       <div className={`w-8 h-8 sm:w-12 sm:h-12 text-white ${className}`}>
         {children}
       </div>
