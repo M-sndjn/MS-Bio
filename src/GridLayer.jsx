@@ -40,7 +40,7 @@ export default function GridLayer() {
         <div className="w-[9%] border-l border-green-500/0" />
 
         {/* COLUMN 2 */}
-        <div className="relative w-[18%] border-l sm:border-amber-400/0 border-white/0 overflow-hidden">
+        <div className="relative w-[18%] hidden sm:block border-l sm:border-amber-400/0 border-white/0 overflow-hidden">
           <div
             className="absolute w-full h-[20vh] sm:min-h-[35vh] bg-white top-[45vh]"
             style={{

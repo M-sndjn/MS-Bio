@@ -107,13 +107,13 @@ export default function SkillsSection() {
       <div style = {{transform: `translateY(${-scroll * 0.24}px)`}}><img src={Triangle} alt="" className="absolute float-slow w-8 h-8 right-[37vh] top-[38vh]"/></div>
       <div style = {{transform: `translateY(${-scroll * 0.36}px)`}}><img src={Triangle} alt="" className="absolute float-slow w-8 h-8 right-[4vh] top-[28vh]"/></div>
        */}
-      <div className=" top-0 h-screen flex flex-col  justify-around">
+      <div className=" top-0 h-screen flex flex-col space-y-20 sm:space-y-5  justify-around">
         
-        <div className="mix-blend-difference">
+        <div className="mix-blend-difference bg-red-500">
           <h2 className="text-3xl sm:text-4xl sm:px-10 py-5 px-5">Skills</h2>
           <span className="text-white sm:px-10 px-5 block text-md sm:text-lg w-[54%]">What I actively use, what I’ve applied in projects, and what I’m currently exploring.</span>
 
-          <div className="flex space-x-4 sm:space-x-8 sm:pl-6 pl-3 translate-y-15 sm:translate-y-20">
+          <div className="flex space-x-4 sm:space-x-8 sm:pl-6 pl-3 translate-y-15 sm:translate-y-20 bg-green-500">
               
               <IconRow isActive={level === "Comfortable"}><Skill><Tailwindicon /></Skill></IconRow>
               <IconRow isActive={level === "Comfortable"}><Skill><Html5 /></Skill></IconRow>
@@ -128,7 +128,7 @@ export default function SkillsSection() {
 
           </div>
         </div>
-        <div className=" h-40 w-full mix-blend-difference">
+        <div className=" h-40 w-full mix-blend-difference bg-yellow-500">
           {level && level !== "Outro" && (
             <span
               key={level} // IMPORTANT: retriggers animation
