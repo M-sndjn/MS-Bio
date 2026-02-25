@@ -109,11 +109,14 @@ export default function SkillsSection() {
        */}
       <div className=" top-0 h-screen flex flex-col space-y-20 sm:space-y-5  justify-around">
         
-        <div className="mix-blend-difference bg-red-500">
-          <h2 className="text-3xl sm:text-4xl sm:px-10 py-5 px-5">Skills</h2>
-          <span className="text-white sm:px-10 px-5 block text-md sm:text-lg w-[54%]">What I actively use, what I’ve applied in projects, and what I’m currently exploring.</span>
+        <div className="mix-blend-difference bg-red-500 space-y-10">
+          <div>
+            <h2 className="text-3xl sm:text-4xl sm:px-10 py-5 px-5">Skills</h2>
+            <span className="text-white sm:px-10 px-5 block text-md sm:text-lg w-[54%]">What I actively use, what I’ve applied in projects, and what I’m currently exploring.</span>
+          </div>
 
-          <div className="flex space-x-4 sm:space-x-8 sm:pl-6 pl-3 translate-y-15 sm:translate-y-20 bg-green-500">
+
+          <div className="flex space-x-6 sm:space-x-8 sm:pl-6 pl-3 sm:translate-y-20 ">
               
               <IconRow isActive={level === "Comfortable"}><Skill><Tailwindicon /></Skill></IconRow>
               <IconRow isActive={level === "Comfortable"}><Skill><Html5 /></Skill></IconRow>
@@ -121,11 +124,6 @@ export default function SkillsSection() {
               <IconRow isActive={level === "Exploring"}><Skill><ReactIcon /></Skill></IconRow>
               <IconRow isActive={level === "Exploring"}><Skill><Laravel /></Skill></IconRow>
               <IconRow isActive={level === "Comfortable"}><Skill><Figma /></Skill></IconRow>
-              
-
-                
-
-
           </div>
         </div>
         <div className=" h-40 w-full mix-blend-difference bg-yellow-500">
