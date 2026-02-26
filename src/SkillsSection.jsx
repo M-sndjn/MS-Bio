@@ -107,7 +107,7 @@ export default function SkillsSection() {
       <div style = {{transform: `translateY(${-scroll * 0.24}px)`}}><img src={Triangle} alt="" className="absolute float-slow w-8 h-8 right-[37vh] top-[38vh]"/></div>
       <div style = {{transform: `translateY(${-scroll * 0.36}px)`}}><img src={Triangle} alt="" className="absolute float-slow w-8 h-8 right-[4vh] top-[28vh]"/></div>
        */}
-      <div className=" top-0 h-screen flex flex-col space-y-8 sm:space-y-5  justify-around">
+      <div className=" top-0 h-screen flex flex-col space-y-20 sm:space-y-40">
         
         <div className="mix-blend-difference space-y-10">
           <div>
@@ -116,7 +116,7 @@ export default function SkillsSection() {
           </div>
 
 
-          <div className="flex space-x-4 sm:space-x-6 sm:pl-6 pl-3 sm:translate-y-20 ">
+          <div className="flex space-x-2 sm:space-x-6 sm:pl-10 sm:translate-y-20 ">
               
               <IconRow isActive={level === "Comfortable"}><Skill><Tailwindicon /></Skill></IconRow>
               <IconRow isActive={level === "Comfortable"}><Skill><Html5 /></Skill></IconRow>
@@ -130,13 +130,13 @@ export default function SkillsSection() {
           {level && level !== "Outro" && (
             <span
               key={level} // IMPORTANT: retriggers animation
-              className="text-xl sm:text-3xl sm:p-10 px-2 py-10 block overflow-hidden whitespace-nowrap typing"
+              className="text-xl sm:text-3xl sm:p-10 px-2 py-4 block overflow-hidden whitespace-nowrap typing"
             >
               {level}
             </span>
           )}
           {level === "Outro" && (
-            <div className="sm:p-10 px-2 py-10 space-y-2">
+            <div className="sm:p-10 px-2 py-4 space-y-2">
               <span className="text-xl sm:text-3xl block typing overflow-hidden whitespace-nowrap ">
                 Let’s build something.
               </span>
@@ -145,7 +145,7 @@ export default function SkillsSection() {
           )}
             <div ref={emailRef}>
               {isEmailActive && (
-                <span className="text-sm sm:text-sm sm:px-10 px-2 opacity-70 block overflow-hidden whitespace-nowrap typing-slow">
+                <span className="text-sm  sm:text-sm sm:px-10 px-2 opacity-70 block overflow-hidden whitespace-nowrap typing-slow">
                   sandajan.masaki1919@gmail.com
                 </span>
               )}

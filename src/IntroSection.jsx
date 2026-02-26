@@ -27,7 +27,7 @@ export default function IntroSection() {
 
     <section className="relative min-h-screen flex ml-10 mt-20">
 
-        <div className="mix-blend-difference  px-5 py-10 sm:p-10 space-y-20 ">
+        <div className="mix-blend-difference  px-2 py-10 sm:p-10 space-y-20 ">
           <div className="">
             <span className="text-2xl sm:text-4xl">Hello!</span>
             <span className="text-2xl sm:text-4xl block">My Name Is Masaki</span>
