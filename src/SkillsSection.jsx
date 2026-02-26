@@ -107,7 +107,7 @@ export default function SkillsSection() {
       <div style = {{transform: `translateY(${-scroll * 0.24}px)`}}><img src={Triangle} alt="" className="absolute float-slow w-8 h-8 right-[37vh] top-[38vh]"/></div>
       <div style = {{transform: `translateY(${-scroll * 0.36}px)`}}><img src={Triangle} alt="" className="absolute float-slow w-8 h-8 right-[4vh] top-[28vh]"/></div>
        */}
-      <div className=" top-0 h-screen flex flex-col space-y-20 sm:space-y-40">
+      <div className=" top-0 h-screen flex flex-col space-y-30 sm:space-y-40">
         
         <div className="mix-blend-difference space-y-10">
           <div>
