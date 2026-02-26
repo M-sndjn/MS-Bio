@@ -109,10 +109,10 @@ export default function SkillsSection() {
        */}
       <div className=" top-0 h-screen flex flex-col space-y-8 sm:space-y-5  justify-around">
         
-        <div className="mix-blend-difference bg-red-500 space-y-10">
+        <div className="mix-blend-difference space-y-10">
           <div>
-            <h2 className="text-3xl sm:text-4xl sm:px-10 py-5 px-5">Skills</h2>
-            <span className="text-white sm:px-10 px-5 block text-md sm:text-lg w-[54%]">What I actively use, what I’ve applied in projects, and what I’m currently exploring.</span>
+            <h2 className="text-3xl sm:text-4xl sm:px-10 py-5 px-2">Skills</h2>
+            <span className="text-white sm:px-10 px-2 block text-md sm:text-lg w-[54%]">What I actively use, what I’ve applied in projects, and what I’m currently exploring.</span>
           </div>
 
 
@@ -126,18 +126,18 @@ export default function SkillsSection() {
               <IconRow isActive={level === "Comfortable"}><Skill><Figma /></Skill></IconRow>
           </div>
         </div>
-        <div className=" h-40 w-full mix-blend-difference bg-yellow-500">
+        <div className=" h-30 w-full mix-blend-difference">
           {level && level !== "Outro" && (
             <span
               key={level} // IMPORTANT: retriggers animation
-              className="text-2xl sm:text-3xl sm:p-10 px-5 py-10 block overflow-hidden whitespace-nowrap typing"
+              className="text-xl sm:text-3xl sm:p-10 px-2 py-10 block overflow-hidden whitespace-nowrap typing"
             >
               {level}
             </span>
           )}
           {level === "Outro" && (
-            <div className="sm:p-10 px-5 py-10 space-y-2">
-              <span className="text-2xl sm:text-3xl block typing overflow-hidden whitespace-nowrap ">
+            <div className="sm:p-10 px-2 py-10 space-y-2">
+              <span className="text-xl sm:text-3xl block typing overflow-hidden whitespace-nowrap ">
                 Let’s build something.
               </span>
             </div> 
@@ -145,7 +145,7 @@ export default function SkillsSection() {
           )}
             <div ref={emailRef}>
               {isEmailActive && (
-                <span className="text-md sm:text-sm sm:px-10 px-5 opacity-70 block overflow-hidden whitespace-nowrap typing-slow">
+                <span className="text-sm sm:text-sm sm:px-10 px-2 opacity-70 block overflow-hidden whitespace-nowrap typing-slow">
                   sandajan.masaki1919@gmail.com
                 </span>
               )}
