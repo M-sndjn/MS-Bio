@@ -99,7 +99,7 @@ export default function SkillsSection() {
   return (
 
 
-    <section ref={sectionRef} className="relative min-h-screen mt-20 ml-10">
+    <section ref={sectionRef} className="relative min-h-screen mt-10 ml-10">
       {/*
       <div style = {{transform: `translateY(${-scroll * 0.34}px)`}}><img src={Triangle} alt="" className="absolute float-slow w-8 h-8 right-[10vh] top-[10vh]"/></div>
       <div style = {{transform: `translateY(${-scroll * 0.26}px)`}}><img src={Triangle} alt="" className="absolute float-slow w-8 h-8 right-[22vh] top-[48vh]"/></div>
@@ -107,7 +107,7 @@ export default function SkillsSection() {
       <div style = {{transform: `translateY(${-scroll * 0.24}px)`}}><img src={Triangle} alt="" className="absolute float-slow w-8 h-8 right-[37vh] top-[38vh]"/></div>
       <div style = {{transform: `translateY(${-scroll * 0.36}px)`}}><img src={Triangle} alt="" className="absolute float-slow w-8 h-8 right-[4vh] top-[28vh]"/></div>
        */}
-      <div className=" top-0 h-screen flex flex-col space-y-36 sm:space-y-40">
+      <div className="pt-10 top-0 h-screen flex flex-col space-y-32 sm:space-y-40">
         
         <div className="mix-blend-difference space-y-10">
           <div>
