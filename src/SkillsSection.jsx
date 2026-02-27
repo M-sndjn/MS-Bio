@@ -99,7 +99,7 @@ export default function SkillsSection() {
   return (
 
 
-    <section ref={sectionRef} className="relative min-h-screen mt-10 ml-10">
+    <section ref={sectionRef} className="relative min-h-[100dvh] mt-10 ml-10">
       {/*
       <div style = {{transform: `translateY(${-scroll * 0.34}px)`}}><img src={Triangle} alt="" className="absolute float-slow w-8 h-8 right-[10vh] top-[10vh]"/></div>
       <div style = {{transform: `translateY(${-scroll * 0.26}px)`}}><img src={Triangle} alt="" className="absolute float-slow w-8 h-8 right-[22vh] top-[48vh]"/></div>

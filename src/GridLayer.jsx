@@ -12,7 +12,7 @@ export default function GridLayer() {
 
 
   return (
-    <div className="fixed top-0 left-0 w-full h-screen  pointer-events-none">
+    <div className="fixed top-0 left-0 w-full h-[100dvh]  pointer-events-none">
       <div className="absolute inset-0 flex">
 
         {/* LEFT MARGIN */}
