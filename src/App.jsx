@@ -6,7 +6,7 @@ import GridLayer from "./GridLayer";
 
 export default function App() {
   return (
-    <div className="relative w-screen min-h-[200vh] font-kodemono bg-black text-white overflow-x-hidden">
+    <div className="relative w-screen min-h-[200dvh] font-kodemono bg-black text-white overflow-x-hidden">
       <GridLayer />
 
       <main className="relative">
