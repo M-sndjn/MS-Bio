@@ -21,13 +21,13 @@ export default function GridLayer() {
         {/* COLUMN 1 */}
         <div className="relative w-[82%] sm:w-[48%] border-l border-red-500/0 overflow-hidden">
           <div
-            className="absolute w-full sm:min-h-[70vh] sm:[--base-y:28vh] [--base-y:28vh] h-[50vh]  bg-white  mix-blend-difference"
+            className="absolute w-full sm:min-h-[70vh] sm:[--base-y:28dvh] [--base-y:28dvh] h-[50vh]  bg-white  mix-blend-difference"
             style={{
               transform: `translateY(calc(var(--base-y) - ${scroll * 1.5}px))`,
             }}
           />
           <div
-            className="absolute w-full sm:min-h-[70vh] sm:[--base-y:178vh] [--base-y:180vh] h-[50vh] bg-white  mix-blend-difference"
+            className="absolute w-full sm:min-h-[70vh] sm:[--base-y:178dvh] [--base-y:180dvh] h-[50vh] bg-white  mix-blend-difference"
             style={{
               transform: `translateY(calc(var(--base-y) - ${scroll * 1.5}px))`,
             }}
