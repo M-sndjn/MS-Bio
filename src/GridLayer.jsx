@@ -3,12 +3,19 @@ import { useEffect, useState } from "react";
 export default function GridLayer() {
   const [scroll, setScroll] = useState(0);
 
-  useEffect(() => {
-    const onScroll = () => setScroll(window.scrollY);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-  
+useEffect(() => {
+  const update = () => {
+    setScroll(window.scrollY);
+  };
+
+  window.addEventListener("scroll", update, { passive: true });
+  window.addEventListener("resize", update); // <-- important for mobile URL bar
+
+  return () => {
+    window.removeEventListener("scroll", update);
+    window.removeEventListener("resize", update);
+  };
+}, []);
 
 
   return (
