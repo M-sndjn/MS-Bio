@@ -39,6 +39,12 @@ useEffect(() => {
               transform: `translateY(calc(var(--base-y) - ${scroll * 1.5}px))`,
             }}
           />
+          <div
+            className="absolute w-full sm:min-h-[70vh] sm:[--base-y:300dvh] [--base-y:300dvh] h-[50vh] bg-white  mix-blend-difference"
+            style={{
+              transform: `translateY(calc(var(--base-y) - ${scroll * 1.5}px))`,
+            }}
+          />
 
         </div>
         

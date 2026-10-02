@@ -3,6 +3,7 @@ import "./App.css";
 import IntroSection from "./IntroSection";
 import SkillsSection from "./SkillsSection";
 import GridLayer from "./GridLayer";
+import ProjectSection from "./ProjectSection";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
       <main className="relative">
         <IntroSection />
         <SkillsSection />
+        <ProjectSection />
         
       </main>
     </div>
