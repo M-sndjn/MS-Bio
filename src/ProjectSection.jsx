@@ -1,46 +1,53 @@
 import ParallaxText from "./ParallaxText";
 import { useEffect, useState } from "react";
+const PROJECTS = [
+  {
+    id: "01",
+    name: "Quest_Forge",
+    stack: "react, tailwind, Vite",
+    status: "live",
+    href: "https://questforge-mu.vercel.app/",
+  },
 
-const WORDS = [
-  "Deliberate",
-  "Consistent",
-  "Simple",
-  "Thoughtful",
 ];
 
 export default function ProjectSection() {
-  const [word, setWord] = useState(WORDS[0]);
-
-  useEffect(() => {
-    let index = 0;
-
-    const interval = setInterval(() => {
-      index = (index + 1) % WORDS.length;
-      setWord(WORDS[index]);
-    }, 2200);
-
-    return () => clearInterval(interval);
-  }, []);
-
-
   return (
-
-    <section className="relative min-h-dvh flex ml-10 mt-20">
-
-        <div className="mix-blend-difference  px-2 py-10 sm:p-10 space-y-20 ">
-          <div className="">
-            <span className="text-2xl sm:text-4xl">Hello!</span>
-            <span className="text-2xl sm:text-4xl block">My Name Is Masaki</span>
-          </div>
-
-          <span className="text-xl sm:text-2xl text-white/80 block mt-6 w-48">
-            I design and build interfaces that feel{" "}
-            <span key={word} className="block text-white overflow-hidden font-medium typing">
-              {word}
-            </span>
+    <section className="relative min-h-dvh ml-10 mt-20">
+      <div className="mix-blend-difference px-2 sm:p-10 py-10 space-y-16">
+        <div>
+          <h2 className="text-3xl sm:text-4xl">Projects</h2>
+          <span className="block text-md sm:text-lg text-white/80 mt-3 w-[54%]">
+            Things I've built.
           </span>
         </div>
- 
+
+        <div className="space-y-12 sm:space-y-16">
+          {PROJECTS.map((p) => (
+            <a key={p.id} href={p.href} className="group block text-sm sm:text-xl">
+              <div className="text-white">
+                <span className="opacity-50">&gt; </span>
+                {p.id}_{p.name}
+                <span className="cursor opacity-0 group-hover:opacity-100">_</span>
+              </div>
+
+              <div className="pl-4 sm:pl-6 mt-2 space-y-1 text-white/70">
+                <div>
+                  <span className="inline-block w-20 sm:w-28 opacity-50">stack</span>
+                  {p.stack}
+                </div>
+                <div>
+                  <span className="inline-block w-20 sm:w-28 opacity-50">status</span>
+                  {p.status} 
+                </div>
+                <div className="text-white transition-transform duration-300 group-hover:translate-x-2">
+                  [ view ↗ ]
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }

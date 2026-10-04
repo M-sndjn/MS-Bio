@@ -66,3 +66,21 @@
     transform: translateY(0);
   }
 }
+
+
+@keyframes enlarge {
+  from { width: 48%; left: 51px; height: 50vh; }
+  to   { width: 100%; left: 0; height: 100%; }
+}
+
+.enlarge {
+  animation: enlarge 1.2s ease-out forwards;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.cursor {
+  animation: blink 1s steps(1) infinite;
+}
